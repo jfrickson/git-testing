@@ -5,7 +5,7 @@ LONGDATE=$(LC_ALL=C date -u -d "$2" "+%B %d, %Y")
 SHORTDATE=$(date -u -d "$2" "+%Y-%m-%d")
 
 # Current version number
-CURRENTVERSION=0.1.0
+CURRENTVERSION=0.1.1
 # Last date
 LASTDATE=2017-04-26
 
