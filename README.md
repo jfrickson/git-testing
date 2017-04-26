@@ -1,6 +1,6 @@
 # git-testing
 
-## VERSION 0.1.0-rc1
+## VERSION 0.1.0
 ## MODIFICATION_DATE 2017-04-26
 
 ### Last Modified: April 26, 2017
