@@ -1,0 +1,31 @@
+#!/bin/sh
+
+# Get date (two formats)
+LONGDATE=$(LC_ALL=C date -u -d "$2" "+%B %d, %Y")
+SHORTDATE=$(date -u -d "$2" "+%Y-%m-%d")
+
+# Current version number
+CURRENTVERSION=0.1.0-rc1
+# Last date
+LASTDATE=2017-04-19
+
+if [ "x$1" = "x" ]
+then
+	echo "Usage: $0 <version number | \"newdate\"> [revision date]"
+		echo ""
+		echo "Run this script with the version (i.e '2.6.4') to update files."
+		echo "      Current version=$CURRENTVERSION"
+		echo "      Current Modification date=$LASTDATE"
+		exit 1
+fi
+
+newversion=$1
+
+# Update version number and release date in the readme
+perl -i -p -e "s/VERSION \".*\"/VERSION \"$1\"/;" include/common.h.in
+perl -i -p -e "s/MODIFICATION_DATE \".*\"/MODIFICATION_DATE \"$SHORTDATE\"/;" include/common.h.in
+perl -i -p -e "s/Last Modified: [0-9].*/Last Modified: $SHORTDATE/;" include/common.h.in
+
+# Update this file with version number and last date
+perl -i -p -e "s/^CURRENTVERSION=.*/CURRENTVERSION=$newversion/;" update-version
+perl -i -p -e "s/^LASTDATE=.*/LASTDATE=$SHORTDATE/;" update-version
