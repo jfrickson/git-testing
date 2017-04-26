@@ -23,9 +23,9 @@ fi
 newversion=$1
 
 # Update version number and release date in the readme
-perl -i -p -e "s/VERSION \".*\"/VERSION \"$1\"/;" include/common.h.in
-perl -i -p -e "s/MODIFICATION_DATE \".*\"/MODIFICATION_DATE \"$SHORTDATE\"/;" include/common.h.in
-perl -i -p -e "s/Last Modified: [0-9].*/Last Modified: $SHORTDATE/;" include/common.h.in
+perl -i -p -e "s/VERSION \".*\"/VERSION \"$1\"/;" include/README.md
+perl -i -p -e "s/MODIFICATION_DATE \".*\"/MODIFICATION_DATE \"$SHORTDATE\"/;" include/README.md
+perl -i -p -e "s/Last Modified: [0-9].*/Last Modified: $SHORTDATE/;" include/README.md
 
 # Update this file with version number and last date
 perl -i -p -e "s/^CURRENTVERSION=.*/CURRENTVERSION=$newversion/;" update-version
