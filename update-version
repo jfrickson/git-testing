@@ -14,8 +14,9 @@ then
 	echo "Usage: $0 <version number | \"newdate\"> [revision date]"
 		echo ""
 		echo "Run this script with the version (i.e '2.6.4') to update files."
-		echo "      Current version=$CURRENTVERSION"
-		echo "      Current Modification date=$LASTDATE"
+		echo ""
+		echo "Current version=$CURRENTVERSION"
+		echo "Current Modification date=$LASTDATE"
 		exit 1
 fi
 
