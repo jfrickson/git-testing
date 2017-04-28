@@ -31,7 +31,7 @@ Junk repo for testing out various things
 * Create new tag (overwriting old) and set the date
 ```
         git checkout <commit hash>
-        GIT_COMMITTER_DATE="2016-09-06T14:59:22Z" git tag -f -a -m \
+        GIT_COMMITTER_DATE="<date from above>" git tag -f -a -m \
              "<new tag name>" "<new tag name>"
         git push -f --tags
 ```
