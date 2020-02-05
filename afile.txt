@@ -1,6 +1,8 @@
 This is a file. This is only a file.
 Make one change, and commit.
 Second change for second commit.
-After merge:
+After merge commit:
 	First change and commit
 	Second change and commit
+After squash merge:
+	First change and commit
