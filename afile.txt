@@ -6,3 +6,5 @@ After merge commit:
 	Second change and commit
 After squash merge:
 	First change and commit
+	Second change and commit
+After this, I'll do a rebase merge
