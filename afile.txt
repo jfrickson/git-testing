@@ -1,3 +1,5 @@
 This is a file. This is only a file.
 Make one change, and commit.
 Second change for second commit.
+After merge:
+	First change and commit
